@@ -23,8 +23,8 @@ class Field
   end
   def calc(item_ext, item)
     count = 1
-    0.upto(2) do |iter_ext|
-      0.upto(2) do |iter|
+    (-1).upto(1) do |iter_ext|
+      (-1).upto(1) do |iter|
         if @cell[item_ext-iter_ext][item-iter].status == "primed" 
           count +=1
         end
