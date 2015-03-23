@@ -1,7 +1,7 @@
 require './lib/Field'
 
 class Game
-	def initialize
+	def initialize(mines_am)
 		@field = Field.new(mines_am)
 		@game_started = true
 	end
