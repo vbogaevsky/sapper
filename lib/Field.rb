@@ -10,10 +10,10 @@ class Field
     @mines_am = mines_am
   end
   def plant_mines
+    done = 0
     until done == @mines_am do
 			a = rand(1..@mines_am)
 			b = rand(1..@mines_am)
-			done = 0
       if a_prev.each {|item| item != a} || b_prev.each {|item| item != b}
         cell[a][b].status = "primed"; done += 1
       end
@@ -22,7 +22,7 @@ class Field
     end
   end
   def calc(item_ext, item)
-    count = 1
+    count = 0
     (-1).upto(1) do |iter_ext|
       (-1).upto(1) do |iter|
         if @cell[item_ext-iter_ext][item-iter].status == "primed" 
@@ -38,5 +38,8 @@ class Field
         item.status= calc(item_ext, item) unless item.status == "primed"
    	  end
     end
+  end
+  def dig(x, y)
+    @cell[x][y].holds_mine?
   end
 end
