@@ -1,4 +1,4 @@
-require 'Cell'
+require './lib/Cell'
 
 class Field
   def initialize(mines_am)
