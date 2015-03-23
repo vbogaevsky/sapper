@@ -1,7 +1,7 @@
 require 'Cell'
 
 class Field
-  def initialize
+  def initialize(mines_am)
     @cell = Array.new(mines_am) do
         |item_ext| item_ext = Array.new(mines_am) do 
         |item| item = Cell.new
