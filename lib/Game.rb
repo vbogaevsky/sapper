@@ -1,7 +1,7 @@
 require_relative 'Field'
 class Game
 	def initialize
-		@field = Field.new
+		@field = Field.new(mines_am)
 		@game_started = true
 	end
 	def game_over?
