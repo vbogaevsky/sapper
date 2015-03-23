@@ -1,4 +1,4 @@
-require 'Field'
+require './lib/Field'
 
 class Game
 	def initialize
