@@ -11,4 +11,5 @@ class Game
 		else @game_over = "won"
 		end
 	end
+	attr_accessor :field
 end
