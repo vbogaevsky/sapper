@@ -1,4 +1,5 @@
-require_relative 'Field'
+require 'Field'
+
 class Game
 	def initialize
 		@field = Field.new(mines_am)
